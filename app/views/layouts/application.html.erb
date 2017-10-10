@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>AppName</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,8 +17,7 @@
     <%= yield %>
 
     <% if user_signed_in? %>
-      <%= link_to 'ログアウト', destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete %>
+      <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
     <% end %>
-
   </body>
 </html>
