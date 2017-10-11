@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "home#authentication"
+  root 'home#authentication'
 
   get 'home/index'
   get 'home/authentication'
