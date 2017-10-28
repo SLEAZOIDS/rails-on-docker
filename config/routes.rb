@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#authentication'
-
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  root  'home#index'
   get 'home/index'
   get 'home/authentication'
 
