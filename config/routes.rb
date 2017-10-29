@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles
   resources :departments
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root  'home#index'
